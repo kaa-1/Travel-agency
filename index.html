@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Travel Agency</title>
+
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="https://unpkg.com/feather-icons"></script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="#" class="logo"> Travel Agency. </a>
+
+            <div class="nav">
+                <a href="index.html">HOME</a>
+                <a href="destination.html">DESTINATION</a>
+                <a href="hotels.html">HOTELS</a>
+                <a href="blog.html">BLOG</a>
+            </div>
+
+            <a href="#" class="login-btn">
+                <i data-feather="user">user</i>
+            </a>
+        </nav>
+        <!-- Navbar end -->
+
+        <!-- Form Booking   -->
+        <section class="search-home">
+            <div class="container">
+                <div class="text">
+                    <h1>TOUR &<br />TRAVEL AGENCY</h1>
+                    <p>temukan destinasi wisata terbaik mu disini</p>
+                </div>
+    
+                <div class="booking-form-home">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="search">Search</label>
+                            <input
+                                type="text"
+                                id="search"
+                                name="search"
+                                placeholder="Search destination..."
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="checkin">Check-In</label>
+                            <input type="date" id="checkin" name="checkin" />
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout">Check-Out</label>
+                            <input type="date" id="checkout" name="checkout" />
+                        </div>
+                        <div class="form-group">
+                            <label for="guest">Guests</label>
+                            <input
+                                type="number"
+                                id="guest"
+                                name="guest"
+                                min="1"
+                                placeholder="Number of guests"
+                            />
+                        </div>
+                        <button type="submit" class="btn-submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Form Booking end -->
+
+        <!-- Destination -->
+        <div class="destination">
+            <div class="heading">
+                <h2>Popular Destination</h2>
+                <a href="#">More</a>
+            </div>
+
+            <div class="card-container">
+                <div class="card-popular">
+                    <img src="img/1.jpeg" alt="" />
+                    <div class="home-card-content">
+                        <h3>BOROBUDUR</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, fugiat?
+                        </p>
+                    </div>
+                </div>
+                <div class="card-popular">
+                    <img src="img/6.jpeg" alt="" />
+                    <div class="home-card-content">
+                        <h3>BROMO</h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, odio quas.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-popular">
+                    <img src="img/5.jpeg" alt="" />
+                    <div class="home-card-content">
+                        <h3>BALI</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-popular">
+                    <img src="img/1.jpeg" alt="" />
+                    <div class="home-card-content">
+                        <h3>BOROBUDUR</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo excepturi inventore quasi velit.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-popular">
+                    <img src="img/6.jpeg" alt="" />
+                    <div class="home-card-content">
+                        <h3>BROMO</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Destination end -->
+
+        <!-- About -->
+        <div class="simple-about-container">
+            <div class="simple-about">
+                <div class="describe">
+                    <h2>About.</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Provident id esse atque asperiores, quod laborum
+                        voluptate corrupti officiis nostrum voluptas dolorem
+                        nulla possimus, rerum fugiat praesentium accusamus!
+                        Accusamus vitae odio fuga adipisci magnam aliquam
+                        quibusdam, id perspiciatis corrupti assumenda amet
+                        placeat quo, aut officia. Modi esse fugiat sequi quos,
+                        eius pariatur hic maiores similique fuga eligendi vitae
+                        optio tempore explicabo eos necessitatibus nemo
+                        architecto.
+                    </p>
+
+                    <a href="about.html">Read More</a>
+                </div>
+
+                <img src="img/9.jpg" alt="" />
+            </div>
+        </div>
+        <!-- About end -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <h1>Travel Agency.</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nesciunt maxime reprehenderit amet? Repellendus
+                        inventore voluptatum consequuntur est, accusantium
+                        corporis laborum?
+                    </p>
+
+                    <div class="footer-nav">
+                        <a href="blog.html">BLOG</a>
+                        <a href="about.html">ABOUT</a>
+                        <a href="contact.html">CONTACT</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+
+                    <div class="icon">
+                        <i data-feather="facebook">facebook</i>
+                        <i data-feather="instagram">instagram</i>
+                        <i data-feather="twitter">twitter</i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Script Icon -->
+        <script>
+            feather.replace();
+        </script>
+        <!-- Script Icone end -->
+    </body>
+</html>

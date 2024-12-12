@@ -1,0 +1,869 @@
+* {
+    border: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+:root {
+    --primary-color: rgb(0, 166, 255);
+    --hover-color: rgb(0, 149, 255);
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    /* min-height: 2000vh; */
+}
+
+/* --- Navbar start --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-style: italic;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.navbar .logo:hover {
+    color: var(--hover-color);
+    transform: scale(1.02);
+    z-index: 10;
+}
+
+.navbar .nav a {
+    color: black;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: transform 0.1s;
+    position: relative;
+}
+
+.navbar .nav a:hover {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.navbar .login-btn {
+    background-color: var(--primary-color);
+    font-size: 1px;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        background-color 0.2s ease;
+    position: relative;
+}
+
+.navbar .login-btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* ==================== HOME ================================================= */
+/* --- Booking Form Home --- */
+.search-home {
+    margin: 4rem 2% 0;
+    background-image: url(img/8.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    height: 450px;
+    display: flex;
+    align-items: end;
+}
+
+.search-home .container {
+    width: 100%;
+    margin: -4rem 2%;
+}
+
+.search-home .text {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+}
+
+.search-home .text h1 {
+    font-size: 2rem;
+}
+
+.booking-form-home {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 1rem 2rem;
+}
+
+.booking-form-home form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.booking-form-home .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+.booking-form-home .form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.booking-form-home .form-group input {
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color: #555;
+}
+
+.booking-form-home .form-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.booking-form-home .btn-submit {
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        background-color 0.2s ease;
+    position: relative; /* Untuk memanfaatkan z-index */
+}
+
+.booking-form-home .btn-submit:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.02); /* Perbesar elemen */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+    z-index: 10; /* Buat elemen berada di atas elemen lain */
+}
+
+/* --- popular Destination --- */
+/* Container Styling */
+.destination {
+    padding: 9rem 4% 0;
+}
+
+.destination .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.destination .heading h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.destination .heading a {
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 8.9px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        background-color 0.2s ease;
+    position: relative;
+}
+
+.destination .heading a:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.destination .card-container {
+    display: flex; /* Flexbox for horizontal alignment */
+    gap: 15px; /* Gap between cards */
+    flex-wrap: wrap; /* Wrap cards on small screens */
+}
+
+/* Card Styling */
+.destination .card-popular {
+    flex: 1 1 calc(20% - 15px); /* Each card takes 20% of the row width minus the gap */
+    max-width: calc(20% - 15px); /* Same as flex basis */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Card Hover Effect */
+.destination .card-popular:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.destination .card-popular img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Card Content Styling */
+.destination .home-card-content {
+    padding: 15px;
+}
+
+.destination .home-card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.destination .home-card-content p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* --- About --- */
+.simple-about-container {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    padding: 2rem 1%;
+}
+
+.simple-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.simple-about .describe {
+    width: 50%;
+}
+
+.simple-about .describe h2 {
+    margin-bottom: 1rem;
+}
+
+.simple-about .describe p {
+    margin-bottom: 2rem;
+}
+
+.simple-about .describe a {
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 8.9px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        background-color 0.2s ease;
+    position: relative;
+}
+
+.simple-about .describe a:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.simple-about img {
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+}
+/* =============================== HOME ================================================= */
+
+/* =============================== DESTINATION ========================================== */
+/* --- Package --- */
+.package {
+    margin: 5rem 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading-package {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 1rem 4% 0.5rem;
+}
+
+.heading-package h2 {
+    width: 50%;
+    justify-content: left;
+}
+
+.heading-package p {
+    width: 40%;
+    text-align: right;
+    font-size: 11px;
+}
+
+.package .card-package {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4%;
+    gap: 10px;
+}
+
+.package .card-package .card-pack {
+    width: 310px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.package .card-package .card-pack h3 {
+    padding: 0.1rem;
+    text-align: center;
+    font-size: 15px;
+}
+
+.package .card-package .card-pack img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.package .card-pack img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Destination Search --- */
+.destination-search {
+    padding: 20px 7%;
+}
+
+.destination-search .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 30%;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.destination-search .form-group input {
+    flex: 1;
+    min-width: 0;
+    font-size: 1rem;
+}
+
+/* --- Destination Card --- */
+.destination-card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 7% 50px;
+}
+
+.destination-card-container .destination-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.destination-card-container .destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.destination-card-container .destination-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.destination-card-container .card-content {
+    padding: 15px;
+}
+
+.destination-card-container .card-content h3 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.destination-card-container .card-content p {
+    font-size: 0.7rem;
+    color: #666;
+    line-height: 1.5;
+}
+/* =============================== DESTINATION ========================================== */
+
+/* =============================== HOTEL ================================================ */
+/* --- Booking Form Hotel --- */
+.booking-form-hotel {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin: 6rem 9% 3rem;
+    padding: 1rem 3rem;
+}
+
+.booking-form-hotel form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.booking-form-hotel .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+.booking-form-hotel .form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.booking-form-hotel .form-group input {
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color: #555;
+}
+
+.booking-form-hotel .form-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.booking-form-hotel .btn-submit {
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        background-color 0.2s ease;
+    position: relative;
+}
+
+.booking-form-hotel .btn-submit:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+/* --- Booking Form Hotel end --- */
+
+/* --- content --- */
+.hotel-container {
+    margin: 1rem 9%;
+}
+
+.hotel-container .content {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.hotel-container .left-panel {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 10px;
+}
+
+/* -- Maps -- */
+.hotel-container .left-panel .maps iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+/* -- Maps end -- */
+
+/* -- Category -- */
+.hotel-container .left-panel .category {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    gap: 10px;
+    padding-left: 1rem;
+    overflow: hidden;
+}
+/* -- Category end -- */
+
+.hotel-container .right-panel {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    gap: 10px;
+    flex-direction: column;
+}
+
+/* -- Promo -- */
+.hotel-container .right-panel .promo {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 140px;
+    border-radius: 10px;
+}
+/* -- Promo end -- */
+
+/* -- Card -- */
+.hotel-container .right-panel .hotel-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%;
+}
+
+.hotel-container .right-panel .hotel-card-container .card {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0.5rem;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.hotel-container .right-panel .hotel-card-container .card-image {
+    display: flex;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.hotel-container .right-panel .hotel-card-container .card-image img {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* --- Card end --- */
+/* =============================== HOTEL ================================================ */
+
+/* =============================== BLOG ================================================= */
+.h-blog {
+    margin: 6rem 9% 3rem;
+    text-align: center;
+}
+
+.blog-container {
+    margin: 0 9% 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+/* -- Card -- */
+.blog-container .blog-card {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog-card .content {
+    padding: 0 1rem 1rem;
+}
+
+.blog-card .content h3 {
+    padding: 0.5rem 0;
+}
+
+.blog-card .content p {
+    font-size: 0.8rem;
+    color: #666;
+}
+/* -- Card end -- */
+/* =============================== BLOG ================================================= */
+
+/* =============================== ABOUTE US ================================================= */
+.about-container {
+    margin: 6rem 11% 3rem;
+}
+
+.about-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-container .content-1,
+.about-container .content-2 {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.about-container .content-1 .text {
+    width: 50%;
+}
+
+.about-container .content-2 .text {
+    width: 50%;
+    text-align: right;
+}
+
+.about-container .content-1 h2,
+.about-container .content-2 h2 {
+    margin-bottom: 1rem;
+}
+
+.content-1 img,
+.content-2 img {
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+/* =============================== ABOUTE US end ============================================= */
+
+/* =============================== Contact =================================================== */
+.contact-section {
+    margin: 6rem 15% 3rem;
+}
+
+.contact-section h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* -- Info Alamat -- */
+.contact-section .alamat {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    margin-bottom: 4rem;
+}
+
+.alamat .info {
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.alamat .info .icon {
+    margin-bottom: 0.5rem;
+}
+
+.alamat .info span {
+    font-weight: bold;
+}
+
+/* -- Form Contact */
+.form-contact-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.form-contact-container form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 20px;
+    width: 55%;
+}
+
+.form-contact-container form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-family: "poppins", sans-serif;
+}
+
+.form-contact-container form input {
+    padding: 0.5rem 0;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    font-family: "poppins", sans-serif;
+}
+
+/* -- Name & Email -- */
+.form-contact-container .name-email {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+/* -- Name -- */
+.name-email .name {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* -- Email -- */
+.name-email .email {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* -- Object -- */
+.contact-row .object {
+    display: flex;
+    flex-direction: column;
+}
+
+/* -- Messege -- */
+.contact-row .message {
+    display: flex;
+    flex-direction: column;
+}
+
+.message textarea {
+    padding: 0.5rem 0;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    width: auto;
+    height: 100px;
+    min-height: 100px;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* -- Button -- */
+.form-contact-container button {
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        background-color 0.2s ease;
+    position: relative;
+}
+
+.form-contact-container button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Image */
+.contact-img {
+    width: 50%;
+}
+
+.contact-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* =============================== Contact end =============================================== */
+
+/* =============================== FAQ ======================================================= */
+.faq-container {
+    max-width: 800px;
+    margin: 5rem auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-container h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 3rem;
+}
+
+.select-container {
+    margin-top: 0.5rem;
+}
+
+.select-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+/* =============================== FAQ end =================================================== */
+
+/*  ============================== Footer ============================== */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 400px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-content h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.footer-nav {
+    margin: 30px 0;
+}
+
+.footer-nav a {
+    color: #fff;
+    padding: 1rem;
+}
+.footer-nav a:hover {
+    color: #bdbbbb;
+}
+
+/* ============================== Footer end ==============================*/
